@@ -3,19 +3,19 @@ let startTime, endTime;
 
 function startTest() {
     // Reset input field and results
-    document.getElementById("output").innerHTML = "";
+    document.getElementById("output").innerText = "";
     let inputBox = document.getElementById("userInput");
     inputBox.readOnly = false;
     inputBox.value = ""
 
     // Insert test text on page
     let testTextElement = document.getElementById("inputText");
-    testTextElement.innerHTML = testText;
+    testTextElement.innerText = testText;
     testTextElement.style = "color: black"
 
     // Change button text and functionality
     var button = document.getElementById("btn");
-    button.innerHTML = "End Test";
+    button.innerText = "End Test";
     button.onclick = endTest;
 
     // Start timer
@@ -52,6 +52,6 @@ function endTest() {
 
     // Reset the button
     var button = document.getElementById("btn");
-    button.innerHTML = "Start Test";
+    button.innerText = "Start Test";
     button.onclick = startTest;
 }
