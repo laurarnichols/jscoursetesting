@@ -26,7 +26,7 @@ function displayTasks() {
 
         // Give each list item a checkbox
         li.innerHTML = `<input type="checkbox" id="task-${index}" ${task.completed ? "checked" : ""}>
-            <label for="task-${index}">${task.text}</label>`;
+            <label for="task-${index}">${task.completed ? "<s>" : ""}${task.text}${task.completed ? "</s>" : ""}</label>`;
         
         // Add event listener to toggle this task
         li.querySelector("input").addEventListener("change", () => toggleTask(index));
